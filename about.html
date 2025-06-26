@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MJF032805G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MJF032805G');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnFast - About Us & Contact</title>
+    <style>
+        /* Basic Reset & Body Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        /* --- Navigation Bar Styles (Applies to all pages) --- */
+        .navbar {
+            background-color: #0056b3; /* Darker blue for nav */
+            padding: 0.7rem 0;
+            text-align: center;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex; /* Makes list items go horizontally */
+            justify-content: center; /* Centers the nav items */
+            flex-wrap: wrap; /* Allows items to wrap on small screens */
+        }
+
+        .navbar ul li {
+            margin: 0 15px; /* Spacing between links */
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.05rem;
+            padding: 5px 0;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+        }
+
+        .navbar ul li a:hover,
+        .navbar ul li a.active { /* Add .active class for current page */
+            color: #e9f7ff; /* Lighter color on hover */
+            border-bottom: 2px solid white; /* Underline effect */
+        }
+        /* --- End Navigation Bar Styles --- */
+
+        /* Container for Content */
+        .container {
+            max-width: 960px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            text-align: center; /* Default center align for main content */
+        }
+
+        /* About Section Styling */
+        .about-section {
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: left; /* Align text within section to left */
+            margin-bottom: 2rem;
+        }
+
+        .about-section h2 {
+            color: #007bff;
+            font-size: 2.2rem;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            text-align: center; /* Center section heading */
+        }
+
+        .about-section p {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+
+        .about-section ul {
+            list-style: disc;
+            margin-left: 20px;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Contact Section Styling */
+        .contact-section {
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: left; /* Align text within section to left */
+        }
+
+        .contact-section h2 {
+            color: #007bff;
+            font-size: 2.2rem;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            text-align: center; /* Center section heading */
+        }
+
+        .contact-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center contact items */
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .contact-item {
+            flex: 1;
+            min-width: 280px;
+            max-width: 45%; /* Two items per row on larger screens */
+            padding: 1rem;
+            background-color: #e9f7ff; /* Light blue background for items */
+            border-left: 5px solid #007bff; /* Blue accent bar */
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .contact-item h3 {
+            color: #0056b3;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .contact-item a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+            color: #0056b3;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 3rem;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .header p {
+                font-size: 1rem;
+            }
+
+            .navbar ul {
+                flex-direction: column;
+            }
+            .navbar ul li {
+                margin: 5px 0;
+            }
+
+            .about-section, .contact-section {
+                padding: 1.5rem;
+            }
+
+            .about-section h2, .contact-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .contact-details {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-item {
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>LearnFast</h1>
+        <p>Unlock Your Potential with Accelerated Learning</p>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="course.html">Courses</a></li>
+             <li><a href="register.html">Register</a></li>
+            <li><a href="about.html" class="active">About Us</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div class="about-section">
+            <h2>About LearnFast</h2>
+            <p>Welcome to **LearnFast**, your premier destination for accelerated and effective skill acquisition. Our mission is to empower individuals to master new subjects and advance their careers at an unprecedented pace.</p>
+
+            <p>We believe that learning should be accessible, engaging, and directly applicable. That's why we've designed our platform with cutting-edge teaching methodologies, hands-on projects, and support from industry experts.</p>
+
+            <p>Whether you're looking to start a new career, enhance existing skills, or simply explore a new passion, LearnFast provides the tools and community to help you succeed faster.</p>
+
+            <h3>Our Philosophy:</h3>
+            <ul>
+                <li><strong>Efficiency:</strong> Get to mastery quicker with optimized learning paths.</li>
+                <li><strong>Practicality:</strong> Focus on real-world skills and immediate application.</li>
+                <li><strong>Expertise:</strong> Learn from the best in their respective fields.</li>
+                <li><strong>Community:</strong> Connect with fellow learners and instructors for collaborative growth.</li>
+            </ul>
+        </div>
+
+        <div class="contact-section">
+            <h2>Contact Us</h2>
+            <p>Have questions, feedback, or need assistance? Don't hesitate to reach out! Our team is here to help you on your learning journey.</p>
+
+            <div class="contact-details">
+                <div class="contact-item">
+                    <h3>Email Support</h3>
+                    <p><a href="mailto:support@learnfast.com">support@learnfast.com</a></p>
+                    <p>For general inquiries and technical assistance.</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Admissions Team</h3>
+                    <p><a href="mailto:admissions@learnfast.com">admissions@learnfast.com</a></p>
+                    <p>For course information and enrollment questions.</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Phone</h3>
+                    <p><a href="tel:+9180XXXXYYYY">+91 80 XXXXYYYY</a></p>
+                    <p>Available Monday-Friday, 9 AM - 5 PM IST.</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Address</h3>
+                    <p>LearnFast Headquarters</p>
+                    <p>123 Learning Lane, Knowledge City</p>
+                    <p>Bengaluru, Karnataka, India - 560001</p>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 2rem; font-style: italic;">We aim to respond to all inquiries within 24-48 business hours.</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 LearnFast. All rights reserved.</p>
+    </footer>
+</body>
+</html>
